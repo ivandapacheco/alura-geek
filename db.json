@@ -1,0 +1,52 @@
+{
+  "jugadores": [
+    {
+      "nombre": "Pau",
+      "apellido": "Cubarsi",
+      "posicion": "Defensa",
+      "valorMercado": 50,
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/77bc3c02-a6ac-43ea-b5aa-3ec8a9a26289/02-Cubarsi-M.jpg?width=940&height=940",
+      "id": "7646"
+    },
+    {
+      "nombre": "Iñigo",
+      "apellido": "Martínez",
+      "posicion": "Defensa",
+      "valorMercado": 40,
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/090c9e0c-4446-44c0-ba4b-995dd818cb24/05-Martinez-M.jpg?width=940&height=940",
+      "id": "39d5"
+    },
+    {
+      "nombre": "Ronald",
+      "apellido": "Araujo",
+      "posicion": "Defensa",
+      "valorMercado": 60,
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/095e289a-3615-4689-84b4-5b84c3011347/04-Araujo-M.jpg?width=940&height=940",
+      "id": "f695"
+    },
+    {
+      "id": "0363",
+      "nombre": "Iñaki",
+      "apellido": "Peña",
+      "posicion": "Portero",
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/c94496a3-0d58-48a5-b61d-7412d99f0a7a/13-Inaki_Pena-M.jpg?width=940&height=940",
+      "valorMercado": 35
+    },
+    {
+      "id": "5ae5",
+      "nombre": "Alejandro",
+      "apellido": "Balde",
+      "posicion": "Lateral Izquierdo",
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/dee2330a-0f74-45a4-8757-fc12dd7eec03/03-Balde-M.jpg?width=940&height=940",
+      "valorMercado": 75
+    },
+    {
+      "id": "703b",
+      "nombre": "Dani",
+      "apellido": "Olmo",
+      "posicion": "Centrocampistas",
+      "imagen": "https://www.fcbarcelona.com/photo-resources/2024/10/13/0d46bf0d-5149-4908-9187-35813907233d/20-Olmo-M.jpg?width=940&height=940",
+      "valorMercado": 70
+    }
+  ]
+}

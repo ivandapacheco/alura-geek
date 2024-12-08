@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+
+    <!-- Link de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- LINK DE FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+
+    <!-- Link Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Link de JS de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+    </script>
+
+    <!-- Link de  SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.7/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Link de SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.7/dist/sweetalert2.min.js"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="d-flex justify-content-center">
+
+    <section class=" p-3 position-fixed top-0 bg-nav w-100" style="z-index: 10;">
+        <div class="row">
+            <div class="col-3 ">
+                <img class="img-flui " src="img/logo.png" alt="" style="max-height: 70px;">
+            </div>
+           <div class="col-6 flex-grow-1  d-flex justify-content-end align-items-center">
+                <h1 class=" text-end px-5 ">Plantilla del Barça</h1>
+           </div>
+        </div>
+    </section>
+
+    <section class="container">
+
+        <aside class="text-end">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-add fw-bold" data-bs-toggle="modal" data-bs-target="#modal-register">
+                <i class="fas fa-user-plus"></i>
+                Añadir Jugador
+            </button>
+        </aside>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modal-register" tabindex="-1" aria-labelledby="modal-registerLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-grana">
+                        <h1 class="modal-title fs-5 fw-bold" id="modal-registerLabel">Añadir Jugador</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body bg-body-modal bg-dark">
+
+                        <form>
+                            <!-- Campo Nombre -->
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">
+                                    <i class="fas fa-user me-2"></i>
+                                    Nombre
+                                </label>
+                                <input type="text" class="form-control form-control-sm " id="nombre" placeholder="Ingresa el nombre">
+                                <div class="error-message text-danger"></div>
+                            </div>
+                        
+                            <!-- Campo Apellido -->
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label"><i class="fas fa-user-circle me-2"></i>Apellido</label>
+                                <input type="text" class="form-control form-control-sm" id="apellido" placeholder="Ingresa el apellido">
+                                <div class="error-message text-danger "></div>
+                            </div>
+                        
+                            <!-- Campo Posición -->
+                            <div class="mb-3">
+                                <label for="posicion" class="form-label"><i class="fas fa-map-marker-alt me-2"></i>
+                                    Posición</label>
+                                <input type="text" class="form-control form-control-sm" id="posicion" placeholder="Ingresa la posición">
+                                <div class="error-message text-danger"></div>
+                            </div>
+                        
+                            <!-- Campo Imagen -->
+                            <div class="mb-3">
+                                <label for="imagen" class="form-label"><i class="fas fa-image me-2"></i>Imagen</label>
+                                <input type="text" class="form-control form-control-sm" id="imagen" placeholder="Ingresa la URL de la imagen ">
+                                <div class="error-message text-danger"></div>
+                            </div>
+                        
+                            <!-- Campo Valor de Mercado -->
+                            <div class="mb-3">
+                                <label for="valorMercado" class="form-label"><i class="fas fa-tag me-2"></i>
+                                    Valor de Mercado</label>
+                                <input type="number" class="form-control form-control-sm" id="valorMercado" placeholder="Ingresa el valor de mercado" min="0">
+                                <div class="error-message text-danger"></div>
+                            </div>
+        
+                            <!-- Botón de Envío -->
+                            <button type="submit" class="btn btn-send btn-sm" id="enviar">
+                                <i class="fas fa-user-plus"></i>
+                                Añadir
+                            </button>
+                        </form>
+
+
+
+                    
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Seccion de tarjetas -->
+        <div class="row p-5" data-jugadores>
+                        
+            <!-- Tarjeta 1 -->
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card jugador-card mb-4 text-white shadow-sm">
+                    <img src="img/jugadores/09-Lewandowski-M.webp" class="card-img-top jugador-img" alt="Imagen del Jugador">
+                    <div class="card-body jugador-info">
+                        <h5 class="card-title text-center text-white mb-1">Lionel Messi</h5>
+                        <p class="card-text text-center text-light mb-3">Delantero</p>
+                        <div class="text-center">
+                            <span class="badge bg-warning text-dark">Valor de Mercado: €100M</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Contenedor de botones (oculto por defecto) -->
+                    <!-- <div class="card-buttons position-absolute top-50 start-50 translate-middle rounded p-4 ">
+
+                        <div class="row gap-3 p-0 m-0"> -->
+                            <!-- Botón de Editar -->
+                            <!-- <div class="btn col-12 d-flex align-items-center p-2 ">
+                                <i class="fa-solid fa-pen-to-square fs-4 me-2 text-success"></i> 
+                                <span class="text-light fw-bold">Editar</span>
+                            </div> -->
+                        
+                            <!-- Botón de Eliminar -->
+                            <!-- <div class="btn col-12  d-flex align-items-center p-2 ">
+                                <i class="fa-solid fa-trash-can fs-4 me-2 text-danger"></i> 
+                                <span class="text-light fw-bold">Eliminar</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>  
+            </div> -->            
+        </div>
+
+
+
+
+        
+       
+
+
+    </section>
+
+    
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/mostrarJugadores.js" type="module"></script>
+    <script src="js/conexionAPI.js" type="module"></script>
+
+    
+</body>
+</html>

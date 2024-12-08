@@ -1,0 +1,110 @@
+:root{
+    --bg-color: #181733;
+    --color-azul: #004b95;
+    --color-grana:#a4234b; 
+    --color-amarillo:#fdc52c;
+    --color-navBar:#0a0927;
+}
+
+body{
+    padding-top: 120px; 
+}
+
+.btn-add{
+    background: rgb(0,75,149);
+    background: linear-gradient(90deg, rgba(0,75,149,1) 0%, rgba(164,35,75,1) 100%);
+    color: whitesmoke;
+   
+
+}
+.btn-add:hover{
+    background: rgb(164,35,75);
+    background: linear-gradient(90deg, rgba(164,35,75,1) 0%, rgba(0,75,149,1) 100%);
+    color: whitesmoke;
+}
+
+
+.btn-send{
+    background-color: inherit;
+    color: var(--color-amarillo);
+    border: thin solid var(--color-amarillo);
+    font-weight: bold;
+}
+.btn-send:hover{
+    background-color: var(--color-amarillo);
+}
+
+input{
+    background-color: inherit !important;
+    border: thin solid transparent !important;
+    box-shadow: 0 0 3px var(--color-grana);
+    color: whitesmoke !important;
+}
+input:focus{
+    box-shadow: 0 0 10px var(--color-grana)!important;
+    color: whitesmoke !important;
+    font-weight:bold !important;
+}
+
+input::placeholder{
+    color: whitesmoke!important;
+    font-size: .7rem;
+}
+
+label{
+    color: whitesmoke!important;
+}
+
+.error-message,
+.fs-7 {
+    font-size: 0.7rem; 
+}
+
+
+/* Tarjetas de jugadores */
+.card-buttons {
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    border: thin solid var(--color-grana);
+    background: rgba(6, 6, 6, 0.8); 
+}
+.jugador-card {
+    background-color: inherit;
+    border-radius: 15px;
+    position: relative;
+    
+}
+
+.jugador-card:hover .jugador-img,
+.jugador-card:hover .jugador-info {
+    filter: brightness(15%);
+    cursor: pointer;
+    
+}
+.jugador-card:hover .card-buttons {
+    opacity:1;   
+}
+
+.jugador-img {
+    border-radius: 15px 15px 0 0;
+    transition: filter .6s ease; /* Transición suave para el filtro de brillo */
+}
+.jugador-info {
+    background: #200122;
+    background: -webkit-linear-gradient(to top, #6f0000, #200122);
+    background: linear-gradient(to top, #6f0000, #200122);
+    border-radius: 0 0 15px 15px;
+    transition: filter 1.5s ease; /* Transición suave para el filtro de brillo */
+}
+/* Utilitarias */
+.bg-nav{
+    background-color: var(--color-navBar);
+    color: var(--color-amarillo);
+}
+.bg-color{
+    background-color: var(--bg-color);
+}
+.bg-grana{
+    background-color: var(--color-grana);
+    color: whitesmoke
+}
